@@ -1,4 +1,4 @@
-name: Rancher Container Cron
+name: Rancher Container CronFR
 description: |
   Rancher Container Crontab starts, stops or restarts containers 
 version: v0.3.1
