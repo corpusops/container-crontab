@@ -1,0 +1,14 @@
+version: '2'
+services:
+  container-crontab:
+    image: corpusops/container-crontab:v0.3.1
+    privileged: true
+    environment:
+      DOCKER_API_VERSION: 1.24
+      TZ: Europe/Paris
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      io.rancher.scheduler.global: true
+      io.rancher.container.hostname_override: container_name
+    command: container-crontab {{- if eq .Values.debug "true" }} -d {{- end }} --rancher-mode{{- if eq .Values.metrics "true" }} --metrics{{- end }}
