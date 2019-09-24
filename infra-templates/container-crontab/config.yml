@@ -1,7 +1,7 @@
 name: Rancher Container Cron
 description: |
   Rancher Container Crontab starts, stops or restarts containers 
-version: 0
+version: v0.3.1
 category: Framework
 labels:
   io.rancher.orchestration.supported: 'cattle'
